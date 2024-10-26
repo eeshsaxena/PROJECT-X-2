@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;400;700&family=Nova+Square&family=Uncial+Antiqua&family=Bruno+Ace+SC&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia", serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(71, 67, 67));
+  color: #000000;
+  transition: background-color 0.5s ease;
+}
+
+.navbar {
+  width: 100vw;
+  padding: 40px;
+  margin-left: -50px;
+  font-family: bruno ace sc;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  border-radius: 20%;
+}
+
+.navbar a:hover {
+  background-color: #938f8f;
+  color: black;
+  transform: scale(1.05);
+  border-radius: 20%;
+}
+
+@media (max-width: 350px) {
+  .navbar a {
+    padding: 16px 13px;
+  }
+}
+
+.header {
+  font-family: bruno ace sc;
+  margin-top: -50px;
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, rgb(71, 67, 67), rgb(0, 0, 0));
+  color: white;
+  animation: fadeIn 1s ease;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.header p {
+  font-size: 1.4em;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.main-content {
+  font-family: poppins;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  animation: slideIn 0.5s ease;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 25px;
+  background: white;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(3, 5, 6, 9);
+}
+
+.content:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 20px rgba(3, 5, 6, 9);
+  transform: scale(1.2);
+}
+
+.content img {
+  max-width: 150px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+#contact {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, rgb(71, 67, 67), rgb(0, 0, 0));
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 70px;
+  margin-top: 4px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  height: 50px;
+  background: #000000;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  animation: fadeIn 1s ease;
+  opacity: 1;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.about{
+    color: #ddd;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    font-family: bruno ace sc;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.about img{
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(6, 4, 6, 12);
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-image {
+    display: block;
+    max-width: 90vw;
+    height: auto;
+  }
+  
+  .social-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+  }
+  
+  .social-icons a img{
+    width: 3vmax;
+  }
+
+  .image-container:hover .social-icons {
+    opacity: 1;
+  }
